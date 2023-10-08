@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Pratice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .navigation{
+            position: relative;
+            width: 70px;
+            height: 300px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba( 0 ,0 , 0, 0.1);
+        }
+        .navigation ul{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+           
+        }
+        .navigation ul li{
+            list-style: none;
+            border-radius: 10px;
+            width: 70px;
+            position: relative;
+            height: 60px;
+            border: 4px solid  #fff;
+            
+        }
+        .navigation ul li:hover{
+           background:blue;
+          
+        }
+        .navigation ul li a{
+            position: relative;
+            text-decoration: none;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            font-weight: 500;
+        }
+        .navigation ul li a .icon{
+            position: relative;
+            display: block;
+            line-height: 60px;
+            text-align: center;
+        }
+        .navigation ul li:hover a .icon{
+            color: #fff;
+        }
+        .navigation ul li a .title{
+            position: absolute;
+            left: 70px;
+            background: #fff;
+            display: block;
+            padding: 5px 10px;
+            width: auto;
+            transform: translateY(-15%) translateX(0px);
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba( 0 ,0 , 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+          
+        }
+        .navigation ul li a .icon .fa-solid{
+            font-size: 24px;
+        }
+        .navigation ul li:hover a .title{
+            transform: translateY(-15%) translateX(10px);
+            opacity: 1;
+            visibility: visible;
+        }
+        .navigation ul li a .title::before{
+            content: "";
+            position: absolute;
+            top: 48%;
+            left: -8px;
+            background:#fff;
+            width:12px ;
+            height: 12px;
+            transform: rotate(45deg) translateY(-50%deg);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+    <ul>
+        <li>
+            <a href="#">
+            <span class="icon">
+            <i class="fa-solid fa-house"></i>
+            </span>
+            <span class="title">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+            <span class="icon">
+            <i class="fa-solid fa-user"></i>
+            </span>
+            <span class="title">Profile</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+            <span class="icon">
+            <i class="fa-solid fa-address-card"></i>
+            </span>
+            <span class="title">About Us</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+            <span class="icon">
+            <i class="fa-brands fa-hire-a-helper"></i>
+            </span>
+            <span class="title">Help</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+            <span class="icon">
+            <i class="fa-brands fa-twitter"></i>
+            </span>
+            <span class="title">Twiter</span>
+            </a>
+        </li>
+    </ul>
+    </div>
+</body>
+</html>
